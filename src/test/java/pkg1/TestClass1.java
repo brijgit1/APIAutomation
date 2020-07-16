@@ -7,6 +7,10 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class TestClass1 {
+	
+	/****
+	 * First RestAssured Script
+	 */
 
 	@Test
 	public void getListOfUsers() {
@@ -24,6 +28,7 @@ public class TestClass1 {
 		RestAssured.basePath="api/users?page=2";
 		RequestSpecification reqSpec = RestAssured.given();
 		Response response=reqSpec.get();
+		System.out.println(response.asString());
 	}
 
 }
