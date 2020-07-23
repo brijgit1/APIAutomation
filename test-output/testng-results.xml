@@ -1,109 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2270" started-at="2020-07-16T17:22:43 IST" finished-at="2020-07-16T17:22:45 IST">
+  <suite name="Default suite" duration-ms="2657" started-at="2020-07-20T20:00:28 IST" finished-at="2020-07-20T20:00:31 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2270" started-at="2020-07-16T17:22:43 IST" finished-at="2020-07-16T17:22:45 IST">
-      <class name="pkg1.ParametersTest">
-        <test-method status="PASS" signature="getListOfUsers(int, int)[pri:0, instance:pkg1.ParametersTest@d44fc21]" name="getListOfUsers" duration-ms="1342" started-at="2020-07-16T17:22:43 IST" data-provider="Data_Page_User_Number" finished-at="2020-07-16T17:22:45 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="2657" started-at="2020-07-20T20:00:28 IST" finished-at="2020-07-20T20:00:31 IST">
+      <class name="pkg1.PathScenarios">
+        <test-method status="PASS" signature="jsonplaceholderCommentVerification()[pri:0, instance:pkg1.PathScenarios@711f39f9]" name="jsonplaceholderCommentVerification" duration-ms="2630" started-at="2020-07-20T20:00:28 IST" finished-at="2020-07-20T20:00:31 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getListOfUsers -->
-        <test-method status="PASS" signature="getListOfUsers(int, int)[pri:0, instance:pkg1.ParametersTest@d44fc21]" name="getListOfUsers" duration-ms="162" started-at="2020-07-16T17:22:45 IST" data-provider="Data_Page_User_Number" finished-at="2020-07-16T17:22:45 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getListOfUsers -->
-        <test-method status="PASS" signature="getListOfUsers(int, int)[pri:0, instance:pkg1.ParametersTest@d44fc21]" name="getListOfUsers" duration-ms="169" started-at="2020-07-16T17:22:45 IST" data-provider="Data_Page_User_Number" finished-at="2020-07-16T17:22:45 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getListOfUsers -->
-        <test-method status="PASS" signature="getSingleUser(int, int)[pri:0, instance:pkg1.ParametersTest@d44fc21]" name="getSingleUser" duration-ms="190" started-at="2020-07-16T17:22:45 IST" data-provider="Data_Page_User_Number" finished-at="2020-07-16T17:22:45 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getSingleUser -->
-        <test-method status="PASS" signature="getSingleUser(int, int)[pri:0, instance:pkg1.ParametersTest@d44fc21]" name="getSingleUser" duration-ms="204" started-at="2020-07-16T17:22:45 IST" data-provider="Data_Page_User_Number" finished-at="2020-07-16T17:22:45 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getSingleUser -->
-        <test-method status="PASS" signature="getSingleUser(int, int)[pri:0, instance:pkg1.ParametersTest@d44fc21]" name="getSingleUser" duration-ms="153" started-at="2020-07-16T17:22:45 IST" data-provider="Data_Page_User_Number" finished-at="2020-07-16T17:22:45 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getSingleUser -->
-      </class> <!-- pkg1.ParametersTest -->
+        </test-method> <!-- jsonplaceholderCommentVerification -->
+      </class> <!-- pkg1.PathScenarios -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

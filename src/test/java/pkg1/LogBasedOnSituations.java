@@ -11,24 +11,10 @@ import org.testng.annotations.Test;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
-public class PostTest {
+public class LogBasedOnSituations {
 	/**
-	 * Sample example of POST API hit
+	 * 
 	 */
-	
-	@Test(enabled = false)
-	public void getListOfUsers() {
-		given()
-		.headers("content-type","application/json")
-		.body("{\r\n" + 
-				"    \"name\": \"BrijTraining\",\r\n" + 
-				"    \"job\": \"TL\"\r\n" + 
-				"}")
-		.baseUri("https://reqres.in/api/users")
-		.when()
-		.post()
-		.then().log().all();
-	}
 	
 	@Test
 	public void getListOfUsersUsingFileRead() throws FileNotFoundException {
@@ -39,11 +25,27 @@ public class PostTest {
 		.baseUri("https://reqres.in/api/users")
 		.when()
 		.post()
-		.then().log().all();
+		.then().log().all();//Response Logging
 	}
 	
 	@Test
-	public void postBodyUsingJsonObject() throws FileNotFoundException {
+	public void requestlogging() throws FileNotFoundException {
+		JSONObject jo=new JSONObject();
+		jo.put("name", "BrijBhanSIngh");
+		jo.put("job", "TL11");
+		
+		//FileInputStream fis=new FileInputStream("src/test/resources/createPayload.txt");
+		given()
+		.log().body()//logging a Request Body
+		.headers("content-type","application/json")
+		.body(jo.toString())
+		.baseUri("https://reqres.in/api/users")
+		.when()
+		.post().then().assertThat().statusCode(201);
+		}
+	
+	@Test
+	public void logwhenerror() throws FileNotFoundException {
 		JSONObject jo=new JSONObject();
 		jo.put("name", "BrijBhanSIngh");
 		jo.put("job", "TL11");
@@ -54,9 +56,9 @@ public class PostTest {
 		.body(jo.toString())
 		.baseUri("https://reqres.in/api/users")
 		.when()
-		.post()
-		.then().log().all();
-	}
+		.post().then().log().ifValidationFails()
+		.assertThat().statusCode(203);
+		}
 	
 	
 	

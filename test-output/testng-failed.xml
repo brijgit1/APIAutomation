@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pkg1.PostTest">
+      <class name="pkg1.PathScenarios">
         <methods>
-          <include name="validateEmailOfData3"/>
-          <include name="validateResponseHeaderServer"/>
+          <include name="PrepareSpecification"/>
         </methods>
-      </class> <!-- pkg1.PostTest -->
+      </class> <!-- pkg1.PathScenarios -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

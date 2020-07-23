@@ -2,13 +2,20 @@ package pkg1;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
-public class TestClass3 {
+public class TestClass3 extends TestBase{
 	
+	public TestClass3() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@Test
 	public void getListOfUsers() {
 		given()
@@ -17,6 +24,15 @@ public class TestClass3 {
 		.get()
 		.then().statusCode(200);
 	}
+	
+	@Test
+	public void readDataFropProp() {
+		given()
+		.when()
+		.get(prop.getProperty("endpoint"))
+		.then().statusCode(200);
+	}
+	
 	
 	@Test
 	public void getListOfUsers1() {
